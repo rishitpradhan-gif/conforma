@@ -8,3 +8,5 @@
 /* Equivalent touch and keyboard controls remain readable at every width. */
 .segmented button,.view-actions button,.endpoint-labels>button,.stage-motion{font-size:14px;min-height:44px}.fit-control label,.fit-facts>div,.fit-facts dd,.domain-tabs button{font-size:14px}.evidence-grid p{font-size:16px}.source-entry a:last-child{min-height:35px;display:inline-flex;align-items:center}@media(max-width:760px){.view-actions button,.segmented button{font-size:13px;padding-left:12px;padding-right:12px}.viewer-toolbar{gap:0}.stage{height:440px}.cover-specimen{height:425px}}
 @media(max-width:760px){.cover-specimen{width:112%;left:-6%}}
+
+canvas:focus-visible{outline-offset:-4px}
