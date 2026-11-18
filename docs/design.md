@@ -1,0 +1,7 @@
+# Design direction
+
+Conforma is an editorial specimen gallery with a working comparison inside it. The entry point is a real molecular form, not a dashboard or a promise of AI-generated discoveries. The paper background, Bodoni serif, Plex labels, restrained terra-cotta accent, and domain-colored molecular model intentionally differ from Parallax's space interface.
+
+The Awwwards evaluation system was reviewed directly: design 40%, usability 30%, creativity 20%, content 10% (https://www.awwwards.com/about-evaluation/). The practical interpretation here is strong typography, useful interaction, an original subject-specific composition, and traceable scientific content. Awwwards' typography/interaction reference material was also consulted (https://assets.awwwards.com/assets/files/live-presentation.pdf). Direct attempts to open the Integrated Biosciences listing and Awwwards 3D collection timed out or were inaccessible; no claim of a completed direct visual review of those pages is made. No award, jury evaluation or endorsement is claimed.
+
+The live model uses the actual common heavy-atom coordinates. A deterministic SVG projection of the same structure provides an immediate first paint and an honest fallback. No generated stock molecular image is used as scientific evidence. Model colors identify declared domains, not predicted function. Full motion controls, a reduced-motion default, keyboard rotation, numerical ruler inputs, and a non-WebGL analysis path are part of the product rather than an overlay of visual effects.

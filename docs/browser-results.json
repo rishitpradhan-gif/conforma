@@ -1,0 +1,17 @@
+{
+  "executed_at": "2026-11-18T23:16:14.692Z",
+  "url": "http://127.0.0.1:4472",
+  "environment": "Chromium headless shell, software WebGL. Desktop and 390px emulated phone; not physical device testing.",
+  "checks": [
+    "Desktop renders real WebGL protein without page overflow or uncaught errors",
+    "Both observed endpoints and illustrative interpolation are labelled distinctly",
+    "Alignment selection recomputes domain measurements",
+    "Domain highlighting, backbone, overlay and endpoint ruler operate",
+    "Export retains source hashes, full matched coordinates, settings and limitations",
+    "Labeled rendered image exports as PNG",
+    "390px phone layout has no overflow and comparison controls operate",
+    "Reduced-motion preference disables ambient rotation",
+    "WebGL failure retains honestly labelled projection and working endpoint measurements"
+  ],
+  "passed": true
+}

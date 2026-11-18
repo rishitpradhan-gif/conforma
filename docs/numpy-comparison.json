@@ -1,0 +1,25 @@
+{
+  "schema": "conforma-independent-check/1",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "method": "NumPy Kabsch SVD with proper-rotation correction; independent of JS Horn quaternion eigensolver.",
+  "real_structure_checks": [
+    {
+      "fit": "core",
+      "fit_residues": 133,
+      "fit_rmsd": 1.550811681907349,
+      "max_coordinate_difference_angstrom": 1.4210854715202004e-14
+    },
+    {
+      "fit": "all",
+      "fit_residues": 214,
+      "fit_rmsd": 7.130700152775837,
+      "max_coordinate_difference_angstrom": 2.4868995751603507e-14
+    }
+  ],
+  "seeded_rigid_transform_checks": 30,
+  "seed": 713,
+  "max_synthetic_coordinate_error_angstrom": 5.684341886080802e-14,
+  "passed": true,
+  "limitation": "Numerical agreement only. Does not validate physical intermediate states, biological mechanism, crystal structures, or visual accuracy."
+}

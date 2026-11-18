@@ -1,0 +1,9 @@
+.git
+node_modules
+src
+tests
+docs
+scripts
+README.md
+LICENSE
+.env*
