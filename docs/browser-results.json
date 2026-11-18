@@ -1,6 +1,6 @@
 {
-  "executed_at": "2026-11-18T23:16:14.692Z",
-  "url": "http://127.0.0.1:4472",
+  "executed_at": "2026-11-18T23:20:17.180Z",
+  "url": "https://rp-conforma.vercel.app",
   "environment": "Chromium headless shell, software WebGL. Desktop and 390px emulated phone; not physical device testing.",
   "checks": [
     "Desktop renders real WebGL protein without page overflow or uncaught errors",

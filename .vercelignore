@@ -7,3 +7,5 @@ scripts
 README.md
 LICENSE
 .env*
+.validation-env
+*.local.json
