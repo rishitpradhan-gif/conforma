@@ -1,0 +1,6 @@
+# Raw fixed-column coordinate records retain their original bytes and hashes.
+public/data/*.pdb -whitespace
+# Built vendor shader strings may retain insignificant trailing blanks.
+public/app.js -whitespace linguist-generated=true
+docs/reference-analysis.json linguist-generated=true
+public/molecule.svg linguist-generated=true
