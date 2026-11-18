@@ -5,3 +5,4 @@ node_modules/
 __pycache__/
 *.local.json
 .validation-env/
+.vercel
