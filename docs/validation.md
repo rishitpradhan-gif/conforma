@@ -11,3 +11,6 @@ Not executed: physical iPhone/Android tests, native app tests, Safari/Firefox co
 ## Version 1.1 protein workspace
 
 All 26 core tests, the original browser regression suite, and the expanded protein-workspace browser workflow passed locally. Live RCSB CORS downloads/search were exercised, not simulated. See protein-workspace.md and protein-browser-results.json. The new construction tests validate declared geometry and template provenance; they do not validate a native fold or physical plausibility.
+
+## 1.2 workspace replay
+29 core tests pass, including source-byte replay, ignored saved atom/provenance claims, integrity rejection, invalid views/chains, legacy rejection and construction-recipe reproduction. Browser checks exercise the new homepage, local reconstruction with side chains, tampered-record rejection, original study routing and 390px layout. Chromium uses software WebGL; this is not physical-device validation.

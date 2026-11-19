@@ -1,22 +1,26 @@
 # Conforma
 
-**One protein. Two shapes.**
+**A protein workspace you can take with you.**
 
-[![Conforma — a real molecular structure rendered in its interactive editorial cover](docs/cover.png)](https://rp-conforma.vercel.app)
+[![Conforma — a real molecular structure rendered in its interactive editorial cover](docs/protein-workspace.png)](https://rp-conforma.vercel.app)
 
 **[Open the experience](https://rp-conforma.vercel.app)** · **[Methods & credits](https://rp-conforma.vercel.app/methods.html)** · **[Download & run locally](https://rp-conforma.vercel.app/conforma-source.zip)**
 
-Conforma makes a structural comparison tangible. Turn a real protein, move between two experimental snapshots, follow a moving domain, and measure the difference. It combines a custom WebGL molecular renderer with a small, independently checked scientific engine.
+Search public protein structures, open your own PDB/mmCIF file, or construct geometry from an amino acid sequence. Inspect chains, measure atom distances, export a figure or modeled FASTA, and save a workspace you can reopen on another device. No account is required. Local files and sequence construction stay in your browser.
 
-The subject is *E. coli* adenylate kinase. [4AKE](https://www.rcsb.org/structure/4AKE) captures an unbound structure; [1AKE](https://www.rcsb.org/structure/1AKE) contains the substrate-mimicking inhibitor AP5A. These are published experimental structures, not generated protein models.
+**New in 1.2:** the workspace is the homepage. Saved version 2 records include coordinate text, a SHA-256 integrity check, view settings and, for constructed models, a recipe that must reproduce the saved coordinates before reopening. Saved source labels are not treated as authenticated provenance. Older version 1 records remain readable JSON but cannot be reopened by this importer.
 
-![The working comparison: real coordinates, domain displacements, alignment sensitivity and endpoint measurements](docs/workbench.png)
+## Why I’m building it
+
+I’m a chemical biology student at UC Berkeley. I want the software I build to make biology easier to work with: let someone bring their own question, inspect the underlying coordinates, and leave with work they can reuse. That means keeping private files local, preserving portable records, and explaining the difference between an observed structure and a constructed model. [The story](https://rp-conforma.vercel.app/#why).
+
+The original [two-structure adenylate kinase study](https://rp-conforma.vercel.app/study.html) remains available, including its independently checked alignment engine.
 
 ## Your own protein workspace
 
 ![Conforma protein workspace with a real multichain structure](docs/protein-workspace.png)
 
-**[Open a protein or construct a sequence](https://rp-conforma.vercel.app/explore.html)**
+**[Open a protein or construct a sequence](https://rp-conforma.vercel.app/)**
 
 - Search RCSB PDB by protein name or load a classic/extended PDB ID. Downloads use mmCIF, so multicharacter chain IDs are supported.
 - Open local uncompressed PDB/mmCIF files in a parser worker. Files stay on the device. View chains individually or together, switch between atoms and Cα traces, change colors, inspect atoms and measure distances.

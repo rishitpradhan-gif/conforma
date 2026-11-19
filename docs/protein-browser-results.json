@@ -1,5 +1,5 @@
 {
-  "executed_at": "2026-11-19T00:17:34.941Z",
+  "executed_at": "2026-11-19T02:58:09.782Z",
   "url": "http://127.0.0.1:4472",
   "environment": "Chromium headless, software WebGL; desktop and emulated 390px phone, not physical-device validation",
   "checks": [
@@ -8,6 +8,7 @@
     "Original coordinate file downloads intact despite a filtered chain view",
     "Local PDB imports through a worker and is not mislabeled as a prediction",
     "FASTA sequence builds locally; no external request; downloaded PDB discloses idealized geometry",
+    "Saved workspace reopens locally with side-chain reconstruction; tampered source is rejected without replacing the model",
     "Exports retain constructed-state provenance; invalid sequence preserves the last successful model",
     "Extended preset changes the actual backbone torsions",
     "Malformed coordinate file cannot replace a valid model",

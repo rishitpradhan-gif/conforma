@@ -1,6 +1,6 @@
 {
-  "executed_at": "2026-11-19T00:10:45.195Z",
-  "url": "http://127.0.0.1:4472",
+  "executed_at": "2026-11-19T02:58:04.684Z",
+  "url": "http://127.0.0.1:4472/study.html",
   "environment": "Chromium headless shell, software WebGL. Desktop and 390px emulated phone; not physical device testing.",
   "checks": [
     "Desktop renders real WebGL protein without page overflow or uncaught errors",
