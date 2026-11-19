@@ -10,4 +10,4 @@ Not executed: physical iPhone/Android tests, native app tests, Safari/Firefox co
 
 ## Version 1.1 protein workspace
 
-All 25 core tests, the original browser regression suite, and the expanded protein-workspace browser workflow passed locally. Live RCSB CORS downloads/search were exercised, not simulated. See protein-workspace.md and protein-browser-results.json. The new construction tests validate declared geometry and template provenance; they do not validate a native fold or physical plausibility.
+All 26 core tests, the original browser regression suite, and the expanded protein-workspace browser workflow passed locally. Live RCSB CORS downloads/search were exercised, not simulated. See protein-workspace.md and protein-browser-results.json. The new construction tests validate declared geometry and template provenance; they do not validate a native fold or physical plausibility.

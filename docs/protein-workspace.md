@@ -22,7 +22,7 @@ No sequence-specific native fold is inferred. No hydrogens or terminal caps are 
 
 ## Executed checks
 
-All 25 Node tests pass: the original comparison tests plus real multichain imports, independent PDB/mmCIF coordinate agreement, malformed input rejection, bounded stream/display behavior, FASTA validation, backbone bond lengths and torsions, source hashes for all 20 CCD templates, side-chain identity/internal-distance preservation, and 500-residue PDB round trips.
+All 26 Node tests pass: the original comparison tests plus real multichain imports, independent PDB/mmCIF coordinate agreement, malformed input rejection, bounded stream/display behavior, FASTA validation, backbone bond lengths and torsions, source hashes for all 20 CCD templates, side-chain identity/internal-distance preservation, and 500-residue PDB round trips.
 
 The protein browser workflow exercises real RCSB download/search, local file imports, original-file preservation after chain filtering, sequence construction without external requests, PDB/JSON/FASTA-related state, invalid-input recovery, extended torsions, desktop/390px layout and a forced non-WebGL projection fallback. Exact executed checks and environment are in protein-browser-results.json. The original comparison browser suite also passes.
 
