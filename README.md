@@ -12,7 +12,23 @@ The subject is *E. coli* adenylate kinase. [4AKE](https://www.rcsb.org/structure
 
 ![The working comparison: real coordinates, domain displacements, alignment sensitivity and endpoint measurements](docs/workbench.png)
 
-## What you can do
+## Your own protein workspace
+
+![Conforma protein workspace with a real multichain structure](docs/protein-workspace.png)
+
+**[Open a protein or construct a sequence](https://rp-conforma.vercel.app/explore.html)**
+
+- Search RCSB PDB by protein name or load a classic/extended PDB ID. Downloads use mmCIF, so multicharacter chain IDs are supported.
+- Open local uncompressed PDB/mmCIF files in a parser worker. Files stay on the device. View chains individually or together, switch between atoms and Cα traces, change colors, inspect atoms and measure distances.
+- Download the original coordinate file without modifying its bytes, or export a record containing source hashes, selected-view settings and parsed coordinates. Coordinate-derived FASTA exports explicitly omit missing residues.
+- Type 3–500 standard amino acids or one FASTA record to construct a local model. Choose α-helical, extended, or custom φ/ψ torsions. Optional residue-specific side chains use bundled RCSB CCD **ideal component** coordinates fitted onto N/CA/C anchors.
+- Download constructed PDB coordinates with explicit non-prediction remarks. The builder uses no external prediction service and sends no sequence to RCSB.
+
+**Construction is not folding.** The shape follows your chosen backbone torsions and reference side-chain templates, rather than predicting a sequence-specific native state. Side-chain rotamers, ring closure, steric clashes, terminal caps, protonation, hydrogens and residue-specific torsion preferences are not validated or optimized. Template anchor-fit RMSDs are retained in the record.
+
+Limits: 12 MiB uncompressed text, 100,000 parsed protein atoms, 24,000 displayed atoms at once. Large entries may require choosing one chain. First model/data block and blank/A alternates are used. Water, ligands and nucleic acids are omitted; biological assemblies are not expanded. This supports many ordinary protein structures, not every archive format or arbitrarily large assembly. RCSB name searches and structure retrieval contact the official public services only after the relevant user action; local files and sequence construction stay local.
+
+## What you can do in the original study
 
 - Rotate **1,656 common heavy atoms** or switch to a smooth Cα backbone view.
 - Inspect both observed endpoints and a clearly labeled illustrative geometric blend.
@@ -22,7 +38,7 @@ The subject is *E. coli* adenylate kinase. [4AKE](https://www.rcsb.org/structure
 - Export a labeled PNG or a full study JSON with matched coordinates, source hashes, fit settings and measurements.
 - Keep using endpoint analysis when WebGL is unavailable; the fallback clearly identifies its static open-state projection.
 
-The visual direction is an editorial specimen gallery: original identity, self-hosted typography, restrained color, and a real molecular form as the cover. There are no external runtime scripts, tracking SDKs, user accounts, paid AI APIs, or generated molecular stock images. See [the design notes](docs/design.md).
+The visual direction is an editorial specimen gallery: original identity, self-hosted typography, restrained color, and a real molecular form as the cover. There are no external runtime scripts, tracking SDKs, user accounts, paid AI APIs, or generated molecular stock images. The protein workspace makes explicit read-only requests to RCSB for searches/downloads; local coordinate parsing and sequence construction stay in-browser. See [the design notes](docs/design.md).
 
 ## Run locally
 
@@ -88,6 +104,18 @@ node tests/browser.mjs
 # CONFORMA_URL can select a deployment.
 # CONFORMA_BROWSER can select an installed Chromium executable.
 ```
+
+## Protein workspace module / CLI
+
+```sh
+node cli.mjs inspect protein.cif --out parsed.json
+node cli.mjs build ACDEFGHIKLMNPQRSTVWY --out idealized.pdb
+node cli.mjs build AEAAAKEAAAKEAAAKA --phi -135 --psi 135 --backbone-only --out extended.pdb
+```
+
+`src/proteins.mjs` handles the supported coordinate formats; `src/sequence.mjs` builds the idealized backbone; `src/sidechains.mjs` applies the source-hashed CCD templates. `scripts/prepare-sidechains.mjs` refreshes those public templates; it never receives user sequences. The original `compare` and `measure` CLI commands remain specific to the bundled adenylate-kinase study.
+
+The expanded checks cover PDB/mmCIF agreement on independently encoded crambin files, a real four-chain hemoglobin fixture, malformed input rejection, download/display bounds, FASTA validation, backbone bond lengths and torsions, all 20 CCD template hashes, side-chain identity and internal-distance preservation, and PDB round trips. See [protein browser results](docs/protein-browser-results.json) for live RCSB downloads/search, local file import, sequence privacy, exports, fallback and emulated-phone checks.
 
 ## Important interpretation limits
 

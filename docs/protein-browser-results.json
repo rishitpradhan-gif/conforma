@@ -1,0 +1,19 @@
+{
+  "executed_at": "2026-11-19T00:10:30.376Z",
+  "url": "http://127.0.0.1:4472",
+  "environment": "Chromium headless, software WebGL; desktop and emulated 390px phone, not physical-device validation",
+  "checks": [
+    "Bundled real mmCIF opens with 327 atoms and 46 Cα residues",
+    "Live RCSB CORS download, multichain selection and backbone view operate",
+    "Original coordinate file downloads intact despite a filtered chain view",
+    "Local PDB imports through a worker and is not mislabeled as a prediction",
+    "FASTA sequence builds locally; no external request; downloaded PDB discloses idealized geometry",
+    "Exports retain constructed-state provenance; invalid sequence preserves the last successful model",
+    "Extended preset changes the actual backbone torsions",
+    "Malformed coordinate file cannot replace a valid model",
+    "Live protein-name search returns selectable database records",
+    "390px layout and sequence construction operate without page overflow",
+    "Non-WebGL fallback projects the loaded structure and retains coordinate downloads"
+  ],
+  "passed": true
+}

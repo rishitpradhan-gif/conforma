@@ -7,3 +7,7 @@
 - Archive integrity and extraction are checked; the extracted zero-dependency CLI reproduces the endpoint ruler. Dependencies, environment files and deployment credentials are excluded from source downloads.
 
 Not executed: physical iPhone/Android tests, native app tests, Safari/Firefox coverage, clinical/experimental validation, molecular dynamics or mechanistic inference. Numerical agreement is not evidence that interpolated frames are physically realized. The original structural determinations belong to their depositors, not this project.
+
+## Version 1.1 protein workspace
+
+All 25 core tests, the original browser regression suite, and the expanded protein-workspace browser workflow passed locally. Live RCSB CORS downloads/search were exercised, not simulated. See protein-workspace.md and protein-browser-results.json. The new construction tests validate declared geometry and template provenance; they do not validate a native fold or physical plausibility.

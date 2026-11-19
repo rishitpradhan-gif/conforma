@@ -1,4 +1,5 @@
 import {build} from 'esbuild';import {copyFile,readdir} from 'node:fs/promises';import './poster.mjs';
 await build({entryPoints:['src/app.mjs'],outfile:'public/app.js',bundle:true,minify:true,format:'esm',target:'es2022',legalComments:'eof'});
+for(const [entry,out] of [['src/explore.mjs','public/explore.js'],['src/protein-worker.mjs','public/protein-worker.js']])await build({entryPoints:[entry],outfile:out,bundle:true,minify:true,format:'esm',target:'es2022',legalComments:'eof'});
 for(const [dir,suffix,out]of [['bodoni-moda','latin-500-normal.woff2','serif.woff2'],['bodoni-moda','latin-500-italic.woff2','serif-italic.woff2'],['ibm-plex-sans','latin-400-normal.woff2','sans.woff2'],['ibm-plex-sans','latin-500-normal.woff2','sans-medium.woff2']]){const root='node_modules/@fontsource/'+dir;const name=(await readdir(root+'/files')).find(n=>n.endsWith(suffix));if(!name)throw Error('Missing font '+dir+suffix);await copyFile(root+'/files/'+name,'public/fonts/'+out);await copyFile(root+'/LICENSE','public/fonts/'+dir+'-LICENSE.txt');}
 console.log('Conforma built with bundled fonts, molecular data and renderer.');

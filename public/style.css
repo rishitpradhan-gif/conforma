@@ -10,3 +10,5 @@
 @media(max-width:760px){.cover-specimen{width:112%;left:-6%}}
 
 canvas:focus-visible{outline-offset:-4px}
+
+.cover-open-protein{display:table;pointer-events:auto;font-size:15px;color:var(--red);text-decoration:none;border-bottom:1px solid #af3f2c80;padding:8px 0;margin-top:12px}.masthead nav{gap:24px}@media(max-width:760px){.cover-open-protein{font-size:14px}}

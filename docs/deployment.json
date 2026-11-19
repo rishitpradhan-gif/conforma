@@ -1,1 +1,11 @@
-{"date":"2026-11-18","url":"https://rp-conforma.vercel.app","repository":"https://github.com/rishitpradhan-gif/conforma","hosting":"Vercel static deployment; no server-side analysis or hosted AI API","git_integration":"Vercel could not attach the GitHub repository. The completed static site was deployed via CLI; automatic deployment on push is not configured.","privacy":"Bundled public structural data, self-hosted fonts, no accounts, analytics or user uploads","validation":"Core, independent numerical, local browser and public production browser workflows passed. See validation.md for the retained failed phone-layout case and limits."}
+{
+  "date": "2026-11-18",
+  "url": "https://rp-conforma.vercel.app",
+  "repository": "https://github.com/rishitpradhan-gif/conforma",
+  "hosting": "Vercel static deployment; no server-side analysis or hosted AI API",
+  "git_integration": "Vercel could not attach the GitHub repository. The completed static site was deployed via CLI; automatic deployment on push is not configured.",
+  "privacy": "Bundled public structural data, self-hosted fonts, no accounts, analytics or user uploads",
+  "validation": "Core, independent numerical, local browser and public production browser workflows passed. See validation.md for the retained failed phone-layout case and limits.",
+  "version": "1.1.0",
+  "runtime": "Bundled static comparison plus browser-local protein import/sequence construction; explicit read-only RCSB requests for search/retrieval"
+}

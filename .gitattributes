@@ -4,3 +4,10 @@ public/data/*.pdb -whitespace
 public/app.js -whitespace linguist-generated=true
 docs/reference-analysis.json linguist-generated=true
 public/molecule.svg linguist-generated=true
+
+public/explore.js -whitespace linguist-generated=true
+public/protein-worker.js -whitespace linguist-generated=true
+public/data/*.cif -whitespace
+tests/fixtures/*.pdb -whitespace
+tests/fixtures/*.cif -whitespace
+tests/fixtures/ccd/*.cif -whitespace
